@@ -35,6 +35,13 @@ A modern AI-powered content compliance checker using Streamlit and Groq's LLM AP
 - **Async-Ready**: Structured for future async/await implementation
 - **Error Isolation**: Separate processing paths for text/audio inputs
 
+## Future Ideas
+- **Graph Engine**: Requests to the large language model should be 
+    done after converting requirements to a DAG (Directed Acyclic Graph)
+- **Reasoning Model Fine Tune**: Reasoning models do well in these 
+    kinds of tasks, given the data on the csv they could be fine 
+    tuned for this downstream task like verfication etc.
+
 ## Installation
 
 1. **Install UV** (if not present):
@@ -49,4 +56,4 @@ uv install
 
 # Activate environment
 source .venv/bin/activate  # Linux/Mac
-.\.venv\Scripts\activate  # Windows
+
