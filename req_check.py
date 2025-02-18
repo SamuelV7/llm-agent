@@ -85,7 +85,8 @@ def verify_transcript(transcript: str) -> TranscriptCheckResult:
             {"role": "user", "content": user_content},
         ],
         temperature=0.6,
-         max_completion_tokens=4096,
+        # max_tokens=6000,
+        max_completion_tokens=4096,
         top_p=0.95,
     )
 

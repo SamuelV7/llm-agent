@@ -9,7 +9,7 @@ def main():
 
     # File uploader for transcripts
     uploaded_file = st.file_uploader("Upload your transcript file", 
-                                     type=["txt"])
+                                     type=["txt, mp3"])
     
     if uploaded_file is not None:
         # Display the filename
@@ -23,13 +23,13 @@ def main():
             show_results(baseline_json)
                 # Here you can add code to process or analyze the transcript content.
         elif uploaded_file.type == "audio/mpeg":
-            st.write("Transcription")
+            st.write("Starting Transcription")
             audio_data = uploaded_file.read()
             audio_file = io.BytesIO(audio_data)
-            # audio_file.name = uploaded_file.name
+            audio_file.name = uploaded_file.name
             # api call to get transcript
             text = transcription.get_transcription(audio_file)
-            baseline_json = req_check.verify_transcript(text)
+            baseline_json = req_check.verify_transcript(text[:5700])
             show_results(baseline_json)
         # For example, call some NLP model or store it in a database:
         # process_transcript(content)
