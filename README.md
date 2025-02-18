@@ -38,6 +38,7 @@ See the LICENSE file for details.
 - **Chunked Processing**: Text truncation (5700 chars) handles API token limits
 - **Async-Ready**: Structured for future async/await implementation
 - **Error Isolation**: Separate processing paths for text/audio inputs
+- **Used Dev Containers**: Easy to deploy to Digital Ocean etc
 
 ## Future Ideas
 - **Graph Engine**: Requests to the large language model should be 
