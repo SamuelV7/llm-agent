@@ -52,8 +52,10 @@ A modern AI-powered content compliance checker using Streamlit and Groq's LLM AP
 cd transcript-compliance
 
 # Install dependecies
+```bash
 uv install
-
+```
 # Activate environment
+```bash
 source .venv/bin/activate  # Linux/Mac
-
+```

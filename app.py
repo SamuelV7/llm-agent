@@ -28,8 +28,8 @@ def main():
             audio_file = io.BytesIO(audio_data)
             audio_file.name = uploaded_file.name
             # api call to get transcript
-            text = transcription.get_transcription(audio_file)
-            baseline_json = req_check.verify_transcript(text[:5700])
+            script = transcription.get_transcription(audio_file)
+            baseline_json = req_check.verify_transcript(script.text[:5700])
             show_results(baseline_json)
         # For example, call some NLP model or store it in a database:
         # process_transcript(content)
