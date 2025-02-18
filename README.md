@@ -10,6 +10,10 @@ A modern AI-powered content compliance checker using Streamlit and Groq's LLM AP
 - 📈 **Structured Analysis** - Pydantic-validated result reporting
 - 🔊 **Audio Processing** - Integrated Whisper transcription pipeline
 
+## License
+This project is licensed under the AGPL-3.0 License.
+See the LICENSE file for details.
+
 ## Technical Approach
 
 ### Architecture
