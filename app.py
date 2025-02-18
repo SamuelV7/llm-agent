@@ -1,3 +1,4 @@
+import io
 import streamlit as st
 import req_check
 
@@ -21,6 +22,13 @@ def main():
             baseline_json = req_check.verify_transcript(content)
             show_results(baseline_json)
                 # Here you can add code to process or analyze the transcript content.
+        elif uploaded_file.type == "audio/mpeg":
+            st.write("Transcription")
+            audio_data = uploaded_file.read()
+            audio_file = io.BytesIO(audio_data)
+            audio_file.name = uploaded_file.name
+
+
         # For example, call some NLP model or store it in a database:
         # process_transcript(content)
 
