@@ -1,6 +1,6 @@
 import io
 import streamlit as st
-import req_check
+import req_check, transcription
 
 def main():
     # App title
@@ -26,9 +26,11 @@ def main():
             st.write("Transcription")
             audio_data = uploaded_file.read()
             audio_file = io.BytesIO(audio_data)
-            audio_file.name = uploaded_file.name
-
-
+            # audio_file.name = uploaded_file.name
+            # api call to get transcript
+            text = transcription.get_transcription(audio_file)
+            baseline_json = req_check.verify_transcript(text)
+            show_results(baseline_json)
         # For example, call some NLP model or store it in a database:
         # process_transcript(content)
 
