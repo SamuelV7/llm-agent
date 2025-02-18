@@ -1,0 +1,23 @@
+{
+    "service": "llm-agent",
+    "workspaceFolder": "/workspace",
+    "dockerComposeFile": "docker-compose.yaml",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go",
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+
+            ]
+        },
+        "settings": {
+            "terminal.integrated.profiles.linux": {
+                "fish": {
+                    "path": "fish"
+                }
+            },
+            "terminal.integrated.defaultProfile.linux": "fish"
+        }
+    }
+}

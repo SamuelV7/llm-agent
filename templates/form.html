@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Milanote Creative Brief Submission</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visual Creator Creative Brief Submission</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label>Creator Name:</label>
+                <input type="text" name="creator_name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="creator_email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Video Topic:</label>
+                <input type="text" name="video_topic" required>
+            </div>
+
+            <div class="form-group">
+                <label>Milanote Project Description:</label>
+                <textarea name="milanote_project" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Board Links (minimum 2):</label>
+                <div id="board-links">
+                    <input type="url" name="board_links" required>
+                    <input type="url" name="board_links" required>
+                </div>
+                <button type="button" onclick="addBoardLink()">Add Another Board</button>
+            </div>
+
+            <div class="form-group">
+                <label>Script Outline:</label>
+                <textarea name="script_outline" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="brand_guidelines_agree" required>
+                    I agree to follow Milanote's brand safety guidelines
+                </label>
+            </div>
+
+            <button type="submit">Submit Brief</button>
+        </form>
+    </div>
+
+    <script>
+        function addBoardLink() {
+            const container = document.getElementById('board-links');
+            const input = document.createElement('input');
+            input.type = 'url';
+            input.name = 'board_links';
+            container.appendChild(input);
+        }
+    </script>
+</body>
+</html>

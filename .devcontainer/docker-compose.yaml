@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  llm-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    ports:
+    - "3001:8080"
